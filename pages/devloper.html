@@ -1,0 +1,183 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ashok_kushwaha</title>
+
+    <style>
+        * {
+            padding: 0;
+            margin: 0;
+        }
+
+        body {
+            background: linear-gradient(-45deg, #ee7752, #e73c7e, #23a6d5, #23d5ab);
+            background-size: 400% 400%;
+            animation: gradient 15s ease infinite;
+            height: 100vh;
+        }
+
+        @keyframes gradient {
+            0% {
+                background-position: 0% 50%;
+            }
+
+            50% {
+                background-position: 100% 50%;
+            }
+
+            100% {
+                background-position: 0% 50%;
+            }
+        }
+
+        .app-widget-profile-card-night {
+            width: 250px;
+            height: 400px;
+            background-color: rgba(11, 10, 45);
+            display: inline-block;
+            border-radius: 5px;
+            border: 1px solid inherit;
+
+            margin: 25px;
+            padding: 10px;
+        }
+
+        .app-widget-profile-card-night img {
+            border-radius: 125px;
+            transition: all 0.5s;
+            width: 125px;
+            height: 125px;
+            margin: 10px;
+            background-position: cenetr;
+            position: relative;
+            top: -40px;
+            right: -0px;
+            box-shadow: 1px 1px 10px 1px darkblue, 1px 1px 20px 1px aqua;
+            z-index: 1;
+        }
+
+        .app-widget-profile-card-night hr {
+            position: relative;
+            bottom: 120px;
+            background-color: rgba(16, 188, 248, 0.44);
+            height: 2px;
+            border: none;
+            box-shadow: 1px 1px 4px 1px rgba(20, 122, 192, 1);
+        }
+
+        .app-widget-profile-card-night h1 {
+            text-transform: uppercase;
+            font-size: 28px;
+            color: rgba(60, 154, 219, 1);
+            font-family: arial;
+            text-align: center;
+            position: relative;
+            bottom: 40px;
+            text-shadow: 5px 1px 50px aqua, 5px 1px 60px blue;
+        }
+
+        .app-widget-profile-card-night ul li {
+            color: rgba(60, 154, 219, 1);
+            font-size: 15px;
+            position: relative;
+            right: -20px;
+        }
+
+        .app-widget-profile-card-night h2 {
+            text-transform: uppercase;
+            font-size: 12px;
+            color: rgba(60, 154, 219, 1);
+            font-family: arial;
+            text-align: center;
+            position: relative;
+            bottom: 40px;
+            text-shadow: 5px 1px 50px aqua, 5px 1px 60px blue;
+        }
+
+        .app-widget-profile-card-night h3 {
+            text-transform: uppercase;
+            font-size: 20px;
+            color: rgba(60, 154, 219, 1);
+            font-family: arial;
+            text-align: center;
+            position: relative;
+            bottom: -40px;
+            text-shadow: 5px 1px 50px aqua, 5px 1px 60px blue;
+        }
+
+        .app-widget-profile-card-night h4 {
+            text-transform: uppercase;
+            font-size: 14px;
+            color: rgba(60, 154, 219, 1);
+            font-family: arial;
+            text-align: center;
+            position: relative;
+            bottom: 60px;
+            text-shadow: 5px 1px 50px aqua, 5px 1px 60px blue;
+        }
+
+        .app-widget-profile-card-night button {
+            width: 100%;
+            z-index: 2;
+            bottom: 190px;
+            position: relative;
+            height: 60px;
+            font-size: 22px;
+            background-color: rgba(11, 10, 45);
+            border: none;
+            cursor: pointer;
+            transition: all 2s;
+            display: none;
+            color: aqua;
+            box-shadow: 1px 1px 100px 1px aqua;
+        }
+
+        .app-widget-profile-card-night button:hover {
+            box-shadow: 1px 1px 100px 1px blue;
+        }
+    </style>
+</head>
+
+<body>
+
+    <center>
+        <div class="app-widget-profile-card-night" onmouseover="app_widget_profile_card()"
+            onmouseout="app_widget_profile_card_out()">
+            <img src="../res_img/ashokimg.jpeg" id="app_widget_profile_card_img">
+            <!-- https://1.bp.blogspot.com/-HgLR7c2TQls/Xa_6FcY5GqI/AAAAAAAABwA/vv9CX_FEgGYiUM99F2_pAr28kZ0qBopzgCLcBGAsYHQ/s1600/stylish%2Bdp%2Bfor%2Bgirls%2B%25282%2529.jpg" -->
+            <hr>
+            <h1>Ashok Kushwaha</h1>
+            <h2>Softwere Engineer </h2>
+            <h3>9893989591</h3>
+            <h6 style="color: aliceblue;">ashokkushwaha6797@gmail.com</h6>
+            <!-- <h5 >Contact us  For More Details...  </h5> -->
+
+            <a href="https://www.instagram.com/ashok_kushwaha.py/?utm_source=qr" style="text-decoration:none"> <button
+                    id="app_widget_profile_card_btn">Follow+</button></a>
+
+        </div>
+    </center>
+
+    <script>
+
+        var cc = document.getElementById("app_widget_profile_card_btn");
+        function app_widget_profile_card() {
+            var ct = document.getElementById("app_widget_profile_card_img");
+            ct.style.top = "260px"
+            cc.style.display = "block";
+        }
+        function app_widget_profile_card_out() {
+            var ct = document.getElementById("app_widget_profile_card_img");
+            ct.style.top = "-40px"
+            cc.style.display = "none"
+        }
+
+    </script>
+
+</body>
+
+</html>
