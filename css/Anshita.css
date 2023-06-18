@@ -252,7 +252,7 @@ h3 {
 .fancy {
   font-family: "Times New Roman", serif;
   text-transform: uppercase;
-
+  /* font-size:25px ; */
   /* font-family: Copperplate, Papyrus, fantasy; */
 }
 
@@ -308,4 +308,8 @@ h3 {
 .ctrdiv {
   margin-left: 10%;
   margin-bottom: 10%;
+}
+
+.img-carausal {
+  height: 60rem;
 }

@@ -514,6 +514,7 @@ body #page-container .et_pb_section .et_pb_button_1:hover {
 }
 .carousel-image {
   background-repeat: no-repeat;
+  margin-left: 5%;
   background-position: center;
   background-size: contain;
   margin-top: 30px;
