@@ -5,10 +5,10 @@
   padding: 0;
   font-family: Raleway, sans-serif;
 }
-body {
+/* body {
   background: linear-gradient(90deg, #c7c5f4, #776bcc);
   height: 80%;
-}
+} */
 .container {
   display: flex;
   align-items: center;

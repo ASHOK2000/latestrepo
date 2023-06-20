@@ -99,6 +99,8 @@ div.section > div > input {
   }
   .container > .row {
     padding: 0 !important;
+    align-items: center;
+    float: unset;
   }
   .container > .row > .col-xs-12.col-sm-5 {
     padding-right: 0;

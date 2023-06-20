@@ -43,6 +43,8 @@ h3 {
 }
 .card {
   height: 90%;
+  max-width: 90%;
+  align-items: center;
 }
 .card-img-top {
   height: 200px;
@@ -65,7 +67,7 @@ h3 {
   left: -100%;
   top: 0;
   background-color: #424874;
-  width: 100%;
+  width: 80%;
   height: 100%;
   transition: 0.5s;
   z-index: -1;
@@ -313,4 +315,3 @@ h3 {
 .img-carausal {
   height: 60rem;
 }
-
