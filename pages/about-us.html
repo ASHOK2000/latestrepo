@@ -1,198 +1,377 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 
 <head>
-    <title>Sakshi Photocopy Shop</title>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
+    <meta http-equiv="x-ua-compatible" content="ie=edge" />
+    <title>Material Design for Bootstrap</title>
+    <link rel="stylesheet" href="../css/Anshita.css">
+    <link href="https://fonts.googleapis.com/css?family=Nunito" rel="stylesheet">
+
+
+    <!-- MDB icon -->
+    <link rel="icon" href="img/mdb-favicon.ico" type="image/x-icon" />
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" />
+    <!-- Google Fonts Roboto -->
+    <link rel="stylesheet"
+        href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700;900&display=swap" />
+    <!-- MDB -->
+    <link rel="stylesheet" href="css/mdb.min.css" />
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.3.1/dist/css/bootstrap.min.css"
+        integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+
+
+
+    <link rel="stylesheet" href="../css/style4.css">
+    <link rel="stylesheet" href="../css/style2.css">
+    <link rel="stylesheet" href="../css/style.css">
+    <link rel="stylesheet" href="../css/style3.css">
 
     <style>
-        /* Reset default browser styles */
-        * {
-            margin: 0;
-            padding: 0;
-            box-sizing: border-box;
-        }
-
-        /* Basic styling */
-        body {
-            font-family: Arial, sans-serif;
-            line-height: 1.5;
-            background-color: #f2f2f2;
-        }
-
-        .container {
-            max-width: 800px;
-            margin: 0 auto;
-            padding: 40px;
-        }
-
-        header {
-            background-color: #333;
-            color: #fff;
-            padding: 20px;
-        }
-
-        h1,
-        h2 {
-            margin-bottom: 20px;
-        }
-
-        nav ul {
-            list-style-type: none;
-        }
-
-        nav ul li {
-            display: inline-block;
-            margin-right: 20px;
-        }
-
-        nav ul li a {
-            text-decoration: none;
-            color: #fff;
-        }
-
-        section.about {
-            background-color: #fff;
-            padding: 40px;
-            margin-top: 20px;
-        }
-
-        footer {
-            background-color: #333;
-            color: #fff;
-            padding: 20px;
-            text-align: center;
-        }
-    </style>
-    <style>
-        * {
-            margin: 0;
-            padding: 0;
-            box-sizing: border-box;
-        }
-
-        .container {
-            max-width: 800px;
-            margin: 0 auto;
-            padding: 40px;
-        }
-
-        h1 {
-            margin-bottom: 20px;
-        }
-
-        form input,
-        form textarea {
-            display: block;
-            margin-bottom: 10px;
-            width: 100%;
-        }
-
-        form button {
-            padding: 10px 20px;
-        }
-
-        #uploadedContent {
-            margin-top: 20px;
-        }
-
-        #uploadedContent img {
+        .img-fluid {
             max-width: 100%;
-            margin-bottom: 10px;
+            height: auto;
         }
 
-        #uploadedContent p {
-            margin-bottom: 20px;
+        /* 
+        body {
+            background: yellow;
+            font-family: "Nunito", sans-serif;
+            font-weight: 300;
+        } */
+
+        .clear {
+            clear: both;
+        }
+
+        .img-fluid {
+            max-width: 100%;
+            height: auto;
+        }
+
+
+
+        .clear {
+            clear: both;
+        }
+
+        .container {
+            background: #fff;
+            max-width: 920px;
+            height: 480px;
+            margin: auto;
+            transform: translateY(15%);
+            box-shadow: 0px 0px 6px 0px #22222273;
+        }
+
+        .container .circles {
+            position: absolute;
+            width: 100%;
+            height: 100%;
+            overflow: hidden;
+        }
+
+        .container .circles:before {
+            content: "";
+            position: absolute;
+            left: -6%;
+            top: -8%;
+            width: 200px;
+            height: 200px;
+            background: #fddb33;
+            border-radius: 50%;
+        }
+
+        .container .circles:after {
+            content: "";
+            position: absolute;
+            right: -11%;
+            bottom: -15%;
+            width: 200px;
+            height: 200px;
+            background: #fddb33;
+            border-radius: 50%;
+        }
+
+        .container .details-container {
+            position: relative;
+            display: flex;
+        }
+
+        .container .details-container .avatar {
+            margin: 10px auto;
+            position: relative;
+            float: left;
+            padding: 20px;
+            animation: 1s ease-out 0s 1 slideInFromLeft;
+        }
+
+        .container .details-container .avatar img {
+            max-width: 240px;
+            margin-top: -70px;
+            border: 10px solid #fff;
+            box-shadow: 0px 0px 6px 0px #22222273;
+        }
+
+        .container .details-container .about {
+            float: right;
+            padding: 20px;
+            margin-top: 50px;
+            animation: 1s ease-out 0s 1 slideUpFromBottom;
+        }
+
+        .container .details-container .about .name p {
+            margin: 0;
+            color: #222;
+            font-size: 1.1em;
+            font-weight: bold;
+        }
+
+        .container .details-container .about .name h1 {
+            color: #fddb33;
+            font-weight: bold;
+            margin: 0;
+            font-size: 3em;
+        }
+
+        .container .details-container .about .about-content p {
+            line-height: 1.6em;
+        }
+
+        .container .details-container .about .about-content button {
+            border: none;
+            color: #222;
+            padding: 10px;
+            background: #fddb33;
+            cursor: pointer;
+            font-weight: bold;
+            width: 250px;
+            height: 40px;
+            font-family: "Nunito", sans-serif;
+            box-shadow: 1px 1px 10px 0px #2222222b;
+            transition: 0.2s all;
+        }
+
+        .container .details-container .about .about-content button:hover {
+            box-shadow: 1px 1px 1px 0px #2222222b;
+        }
+
+        .container .details-container .about .about-content button:focus,
+        .container .details-container .about .about-content button:active {
+            outline: 0;
+            box-shadow: 1px 1px 10px 0px #22222280;
+        }
+
+        .container .skills-container {
+            display: flex;
+            justify-content: space-between;
+            padding: 20px;
+            position: relative;
+            z-index: 1;
+            animation: 1s ease-in 0s 1 fadeIn;
+        }
+
+        .container .skills-container button {
+            flex: 1;
+            padding: 10px;
+            margin: 5px;
+            border: none;
+            color: #222;
+            padding: 10px;
+            background: #fddb33;
+            cursor: pointer;
+            font-weight: bold;
+            width: 250px;
+            height: 40px;
+            font-family: "Nunito", sans-serif;
+            box-shadow: 1px 1px 10px 0px #2222222b;
+            transition: 0.2s all;
+        }
+
+        .container .skills-container button:hover {
+            box-shadow: 1px 1px 1px 0px #2222222b;
+        }
+
+        .container .skills-container button:focus,
+        .container .skills-container button:active {
+            outline: 0;
+            box-shadow: 1px 1px 10px 0px #22222280;
+        }
+
+        @media only screen and (max-width: 766px) {
+            .container {
+                height: auto;
+            }
+
+            .container .details-container {
+                flex-direction: column;
+            }
+
+            .container .details-container .avatar img {
+                width: 300px;
+            }
+
+            .container .details-container .about {
+                margin-top: 10px;
+            }
+        }
+
+        @keyframes slideInFromLeft {
+            0% {
+                transform: translateX(-100%);
+                opacity: 0;
+            }
+
+            100% {
+                transform: translateX(0);
+                opacity: 1;
+            }
+        }
+
+        @keyframes slideUpFromBottom {
+            0% {
+                transform: translateY(70%);
+                opacity: 0;
+            }
+
+            100% {
+                transform: translateX(0);
+                opacity: 1;
+            }
+        }
+
+        @keyframes fadeIn {
+            0% {
+                opacity: 0;
+            }
+
+            100% {
+                opacity: 1;
+            }
         }
     </style>
+
+
+
 </head>
 
-<body>
-    <header>
-        <h1>About Us</h1>
-        <nav>
-            <ul>
-                <li><a href="index.html">Home</a></li>
-                <li><a href="services.html">Services</a></li>
-                <li><a href="contact.html">Contact</a></li>
-            </ul>
-        </nav>
-    </header>
+<body class="home page-template-default page page-id-7 et-tb-has-template
+	et-tb-has-header et-tb-has-footer wls_chrome wls_windows et_button_no_icon
+	et_pb_button_helper_class et_cover_background et_pb_gutter windows
+	et_pb_gutters3 et_pb_pagebuilder_layout et_no_sidebar et_divi_theme et-db
+	chrome" style="overflow-x: hidden;">
+    <div id="page-container" style="overflow-y: hidden; ">
 
-    <section class="about">
-        <div class="container">
-            <h2>Welcome to Sakshi Photocopy Shop!</h2>
-            <p>
-                We are a leading provider of online services, catering to all your document needs. With our
-                state-of-the-art infrastructure and dedicated team, we strive to offer the best solutions to our
-                customers.
-            </p>
-            <p>
-                Our mission is to provide high-quality services at affordable prices, ensuring customer satisfaction
-                every step of the way. Whether you need photocopying, printing, scanning, or other document-related
-                services, we've got you covered.
-            </p>
-            <p>
-                At Sakshi Photocopy Shop, we understand the importance of time and efficiency. That's why we leverage
-                the latest technology and employ skilled professionals to deliver accurate and quick results.
-            </p>
-            <p>
-                We value our customers and believe in building long-term relationships. Your trust and satisfaction are
-                of utmost importance to us. Our friendly staff is always ready to assist you with any queries or
-                specific requirements you may have.
-            </p>
-            <p>
-                Experience the convenience of our online services and let us take care of your document needs. Join our
-                growing list of satisfied customers today!
-            </p>
+        <div id="et-boc" class="et-boc">
+
+            <nav class="navbar navbar-expand-lg navbar-light bg-light ">
+                <a class="navbar-brand" href="../index.html"><img src="../res_img/ShopLogo007.png" width="80"
+                        height="65" class="navimg" alt="SakshiPhotocopy">
+                </a>
+                <button class="navbar-toggler" type="button" data-toggle="collapse"
+                    data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false"
+                    aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <div style="margin-right:12rem">
+                    <ul style="list-style: none">
+                        <li class="fancy" style="font-size:19px ; ">Sakshi&nbsp;PhotoCopy &amp; Online &nbsp;Center</li>
+                        <li style="font-size:12px;">Bansagar,&nbsp;Deolond&nbsp;Distt-&nbsp;shahdol&nbsp;Mp</li>
+                    </ul>
+                </div>
+                <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                    <ul class="navbar-nav mr-auto mr-sm-2  ">
+                        <!-- nav link here -->
+
+                        <li class="nav-item">
+                            <a class="nav-link" href="../index.html">Home</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="./Our Services.html">Services</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="./payment.html">Payment</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" target="_blank" href="./shopping.html">Shoppig</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="./about-us.html">About us</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="./photoGallry.html">Gallery</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="./Contact-us.html">Contact</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="./login.html">Login</a>
+                        </li>
+                    </ul>
+                </div>
+            </nav>
         </div>
-    </section>
-
-    <div class="container">
-        <h1>Image Upload Form</h1>
-        <form id="uploadForm" enctype="multipart/form-data">
-            <input type="file" id="imageInput" accept="image/*" />
-            <textarea id="descriptionInput" placeholder="Enter description"></textarea>
-            <button type="submit">Upload</button>
-        </form>
-        <div id="uploadedContent"></div>
     </div>
 
-    <script>const form = document.getElementById('uploadForm');
-        const imageInput = document.getElementById('imageInput');
-        const descriptionInput = document.getElementById('descriptionInput');
-        const uploadedContent = document.getElementById('uploadedContent');
-
-        form.addEventListener('submit', function (event) {
-            event.preventDefault();
-
-            const file = imageInput.files[0];
-            const reader = new FileReader();
-
-            reader.onload = function (e) {
-                const imageSrc = e.target.result;
-                const description = descriptionInput.value;
-
-                displayImageAndDescription(imageSrc, description);
-                form.reset();
-            };
-
-            reader.readAsDataURL(file);
-        });
-
-        function displayImageAndDescription(imageSrc, description) {
-            const image = document.createElement('img');
-            image.src = imageSrc;
-
-            const descriptionParagraph = document.createElement('p');
-            descriptionParagraph.textContent = description;
-
-            uploadedContent.appendChild(image);
-            uploadedContent.appendChild(descriptionParagraph);
-        }
-    </script>
-    <footer>
-        <p>&copy; 2023 Sakshi Photocopy Shop. All rights reserved. | Designed by Your Name</p>
-    </footer>
+    <div class="container">
+        <div class="circles"></div>
+        <div class="details-container">
+            <div class="avatar">
+                <img src="https://i.suar.me/l3zYA/l" class="img-fluid" alt="">
+            </div>
+            <div class="about">
+                <div class="name">
+                    <!-- <p>
+                        Hello There!
+                    </p>
+                    <h1>
+                        I'm Amr Arnous
+                    </h1> -->
+                </div>
+                <div class="about-content">
+                    <h style="color: rgb(216, 207, 23); font-weight: 800; float: center;">साक्षी फोटोकॉपी और एमपी ऑनलाइन
+                        शॉप में आपका
+                        स्वागत है!</h>
+                    <br>
+                    <br>
+                    <p>
+                        हम हृदय से आपका स्वागत करते हैं साक्षी फोटोकॉपी और एमपी ऑनलाइन शॉप पर! हमारी वेबसाइट पर आने के
+                        लिए धन्यवाद। हमारे द्वारा प्रदान की जाने वाली उच्च गुणवत्ता वाली सेवाओं के माध्यम से हमें अवसर
+                        मिलता है आपके जीवन के खास पलों को और भी खास बनाने में सहायता करने का। <br>
+                        हमारा लक्ष्य है सभी ग्राहकों को विशेष बनाना और उनके विशेष पलों को और भी यादगार बनाना। हम विभिन्न
+                        छपाई और ऑनलाइन सेवाएं प्रदान करते हैं, जिनमें डिजिटल प्रिंटिंग,बैंकिंग
+                        ,बीमा,ऑनलाइन सेवा और अन्य सामग्री को
+                        शामिल किया जाता है।<br>
+                        हमारी वेबसाइट पर नेविगेट करते समय, आप आसानी से अपनी आवश्यकताओं के अनुसार उत्पाद चुन सकते हैं और
+                        हमारे उचित और संगठित दर्जे की वजह से आपको खरीदारी का सुखद अनुभव मिलेगा। हमारे द्वारा प्रदान की
+                        जाने वाली सेवाओं के साथ, आप अपनी जरूरतों को पूरा करने में सफलता प्राप्त करेंगे।<br>
+                        इस सफलता के पीछे हमारे विश्वास हैं कि हमारे ग्राहक हमारे सबसे बड़े संपत्ति हैं और हम आपसे दृढ़ता
+                        से भरोसा करते हैं कि हम इस भरोसे को सदैव बनाए रखेंगे।
+                        अपने शॉपिंग का एक नया अनुभव प्राप्त करने के लिए हमारी वेबसाइट पर जाएँ और अपनी पसंदीदा उत्पादों
+                        को चुनें।
+                    </p> <br>
+                    <div style="float:right;  margin-right: 50px;">
+                        <h4> करुणा सिंह
+                        </h4>
+                    </div>
+                </div>
+            </div>
+            <div class="clear"></div>
+        </div>
+        <div class="skills-container">
+            <!-- <button>
+                Reader
+            </button>
+            <button>
+                Coder
+            </button> -->
+            <!-- <button>
+            </button> -->
+        </div>
+    </div>
 
 </body>
 
